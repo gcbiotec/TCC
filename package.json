@@ -2,10 +2,17 @@
   "name": "tcc",
   "version": "1.0.0",
   "description": "tcc_draft",
-  "main": "index.js",
+  "author": "gabriel",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "gabriel",
+  "main": "index.js",
+  "dependencies": {
+    "vue-router": "^3.2.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-router": "^4.5.13",
+    "@vue/cli-service": "^4.5.13"
+  },
   "license": "ISC"
 }
