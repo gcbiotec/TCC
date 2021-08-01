@@ -18,11 +18,11 @@
         <button
           @click="IrParaCadastro"
           type="button"
-          class="btn btn-outline-success"
+          class="btn btn-outline-primary"
         >
           <card-cadastro
-            titulo="Cadastro de Cachorros"
-            subtitulo="Clique aqui para cadastrar um cachorro!"
+            titulo="Cadastro de Novos Pacientes"
+            subtitulo="Clique aqui para cadastrar um novo paciente!"
           />
         </button>
       </div>
@@ -37,12 +37,14 @@
 
 import CardBoasVindas from "@/components/CardBoasVindas.vue";
 import CardHospital from '../components/CardHospital.vue';
+import CardCadastro from "../components/CardCadastro.vue";
 
 export default {
   name: 'Home',
   components: {
     CardBoasVindas,
     CardHospital,
+    CardCadastro,
   },
   methods:{
     IrParaCadastro(){
