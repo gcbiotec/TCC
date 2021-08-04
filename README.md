@@ -3,7 +3,7 @@
 
 ## Metafora do Problema
 
-Nos dias atuais temos visto o assunto de data science e machine learning aparecendo de forma muito frequente. Também é muito comum escutarmos a expressão: "Os dados são o novo petróleo". No entanto para que seja possível a utilização dos dados, é importante que eles sejam coletados de forma estruturada e rápida!
+Nos dias atuais temos visto o assunto de [data science](https://pt.wikipedia.org/wiki/Ci%C3%AAncia_de_dados) e [machine learning](https://pt.wikipedia.org/wiki/Aprendizado_de_m%C3%A1quina) aparecendo de forma muito frequente. Também é muito comum escutarmos a expressão: "Os dados são o novo petróleo". No entanto para que seja possível a utilização dos dados, é importante que eles sejam coletados de forma estruturada e rápida!
 
 
 ## Descrição da solução
