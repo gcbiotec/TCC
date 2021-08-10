@@ -10,7 +10,7 @@ Nos dias atuais temos visto o assunto de [data science](https://pt.wikipedia.org
 
 Nosso produto vem resolver este problema! Criamos uma solução que permite a inserção de dados por pessoas cm um mínimo de treinamento, pois é capaz de guiar o usuário no sentido de não permitir a inserção de dados errados no formulário. Além disso, nosso produto pode ser totalmente customizado de acordo com a necessidade do cliente!
 
-## [Diagramas](/doc/tecnica/README.md) 
+## [Diagrama de Fluxo](Diagrama_Fluxo.jpg) 
 
 
 ## [Prototipação](https://wireframepro.mockflow.com/editor.jsp?editor=on&bgcolor=white&perm=Create&ptitle=Medic%20Data&category=sketchui&projectid=Mbf134571e7530aa25243be2574fe3a2d1628033950983&publicid=8e933ca9103947b09ecbbe723480456d#/page/21bdbe9658a645098f7e2cb4b641bf19)
