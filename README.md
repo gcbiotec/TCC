@@ -18,4 +18,4 @@ Nosso produto vem resolver este problema! Criamos uma solução que permite a in
 ### [Diagrama de Arquitetura](Diagrama_Arquitetura.png)
 ### [Diagrama UML](UML.png)
 ### [Modelo ER](Modelo_ER.jpg)
-### [Prototipação](https://wireframepro.mockflow.com/editor.jsp?editor=on&bgcolor=white&perm=Create&ptitle=Medic%20Data&category=sketchui&projectid=Mbf134571e7530aa25243be2574fe3a2d1628033950983&publicid=8e933ca9103947b09ecbbe723480456d#/page/21bdbe9658a645098f7e2cb4b641bf19)
+### [Prototipação](https://wireframepro.mockflow.com/view/Mbf134571e7530aa25243be2574fe3a2d1628033950983#/page/21bdbe9658a645098f7e2cb4b641bf19)
