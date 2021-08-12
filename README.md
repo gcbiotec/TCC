@@ -16,6 +16,5 @@ Nosso produto vem resolver este problema! Criamos uma solução que permite a in
 
 ### [Diagrama de Fluxo](Diagrama_Fluxo.jpg) 
 ### [Diagrama de Arquitetura](Diagrama_Arquitetura.png)
-### [Diagrama UML](UML.png)
-### [Modelo ER](Modelo_ER.jpg)
+### [Modelo ER](Modelo_ER.jpg.png)
 ### [Prototipação](https://wireframepro.mockflow.com/view/Mbf134571e7530aa25243be2574fe3a2d1628033950983#/page/21bdbe9658a645098f7e2cb4b641bf19)
