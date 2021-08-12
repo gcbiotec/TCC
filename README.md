@@ -12,7 +12,7 @@ No entanto para que seja possível a utilização dos dados, é importante que e
 
 ## Descrição da solução
 
-Nosso produto vem resolver este problema! Criamos uma solução que permite a inserção de dados por pessoas cm um mínimo de treinamento, pois é capaz de guiar o usuário no sentido de não permitir a inserção de dados errados no formulário. Além disso, nosso produto pode ser totalmente customizado de acordo com a necessidade do cliente!
+Nosso produto vem resolver este problema! Criamos uma solução que permite a inserção de dados por pessoas com um mínimo de treinamento, pois é capaz de guiar o usuário no sentido de não permitir a inserção de dados errados no formulário. Além disso, nosso produto pode ser totalmente customizado de acordo com a necessidade do cliente!
 
 ### [Diagrama de Fluxo](Diagrama_Fluxo.jpg) 
 ### [Diagrama de Arquitetura](Diagrama_Arquitetura.png)
