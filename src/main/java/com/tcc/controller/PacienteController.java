@@ -62,8 +62,8 @@ import java.util.Optional;
             // Aqui estava Patching
 
         @DeleteMapping(value = "{id}")
-        public ResponseEntity deletePacienteById(@PathVariable Long id) {
-            Optional<Paciente> pacienteFromDB = pacienteRepository.findById(id);
+        public ResponseEntity deletePacienteById(@PathVariable int pacienteId) {
+            Optional<Paciente> pacienteFromDB = pacienteRepository.findById(pacienteId);
 
             if (pacienteFromDB.isPresent()) {
                 Paciente paciente = pacienteFromDB.get();
