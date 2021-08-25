@@ -16,6 +16,20 @@
     <div class="row">
       <div class="col-6" id="Cadastro">
         <button
+          @click="IrParaGrafico"
+          type="button"
+          class="btn btn-outline-primary"
+        >
+          <card-cadastro
+            titulo="Acesso aos gráficos"
+            subtitulo="Clique aqui para acessar os gráficos com dados do paciente!"
+          />
+        </button>
+      </div>
+
+      <div class="row">
+      <div class="col-6" id="Cadastro">
+        <button
           @click="IrParaCadastro"
           type="button"
           class="btn btn-outline-primary"
@@ -27,7 +41,7 @@
         </button>
       </div>
     </div>
-
+  </div>
   </div>
 </template>
 
@@ -44,11 +58,14 @@ export default {
   components: {
     CardBoasVindas,
     CardHospital,
-    CardCadastro,
+    CardCadastro,    
   },
   methods:{
     IrParaCadastro(){
       this.$router.push({path:"/TelaCadastro"});
+    },
+    IrParaGrafico(){
+      this.$router.push({path:"/TelaGrafico"});
     }
   }
 };

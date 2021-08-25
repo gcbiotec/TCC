@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import TelaCadastro from '../views/TelaCadastro.vue'
-import TelaGraficos from '../views/TelaGraficos'
+import TelaGraficos from '../views/TelaGraficos.vue'
 
 Vue.use(VueRouter)
 
@@ -21,8 +21,7 @@ const routes = [
     path: '/telagraficos',
     name: 'TelaGraficos',
     component: TelaGraficos
-  },
-  
+  }, 
 ]
 
 const router = new VueRouter({

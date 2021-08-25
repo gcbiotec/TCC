@@ -1,35 +1,32 @@
-
 <template>
-    <div class="card">
-      <div class="card-body">
-        <card-grafico Local do Grafico>
-         <h1>Local do Grafico</h1>
-        </card-grafico>       
-      </div>
-    </div>    
+  <div id="appp">
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <visualisation></visualisation>
+
+  </div>
 </template>
 
 <script>
-import CardGrafico from "../components/CardGrafico.vue";
+/* eslint-disable */
+
+import Visualisation from '../components/Visualisation.vue';
 
 export default {
-  name: 'TelaGraficos',
+  name: 'appp',
   components: {
-    CardGrafico,
-  },
-};
+    Visualisation,
+    
+  }
+}
 </script>
 
-
- <!--dadosEstatisticos(){
-        let dados = [
-            {
-                glicose: 12,
-                hemoglobina: 14,
-            },
-
-        ];
-        this.todosDados.array.forEach(paciente => {
-            
-        });
-    } -->
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
