@@ -8,8 +8,8 @@ public class Paciente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "pacienteId")
-    private Integer pacienteId;
+    //@Column(name = "pacienteId")
+    private Long pacienteId;
 
     @Column(name = "nome")
     private String nome;
@@ -71,7 +71,7 @@ public class Paciente {
     @Column(name = "diagnostico")
     private String diagnostico;
 
-    public Paciente(int pacienteId, String nome, int idade, int altura, int peso, int glicose, double creatinina, double ck_mb, double hemoglobina, int leucocitos, int neutrofilos, double HDL, double LDL, int troponina, int albumina, String hipertensao, String diabetes, String fumante, String alcoolismo, String comorbidades, String diagnostico) {
+    public Paciente(Long pacienteId, String nome, int idade, int altura, int peso, int glicose, double creatinina, double ck_mb, double hemoglobina, int leucocitos, int neutrofilos, double HDL, double LDL, int troponina, int albumina, String hipertensao, String diabetes, String fumante, String alcoolismo, String comorbidades, String diagnostico) {
         this.pacienteId = pacienteId;
         this.nome = nome;
         this.idade = idade;
@@ -95,11 +95,11 @@ public class Paciente {
         this.diagnostico = diagnostico;
     }
 
-    public int getPacienteId() {
+    public Long getPacienteId() {
         return pacienteId;
     }
 
-    public void setPacienteId(int pacienteId) {
+    public void setPacienteId(Long pacienteId) {
         this.pacienteId = pacienteId;
     }
 

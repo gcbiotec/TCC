@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
@@ -22,7 +23,7 @@ import java.util.Optional;
         private PacienteRepository pacienteRepository;
 
         @GetMapping("{id}")
-        public ResponseEntity<Paciente> retornaPaciente(@PathVariable("id") int pacienteId) {
+        public ResponseEntity<Paciente> retornaPaciente(@PathVariable("id") Long pacienteId) {
             Optional<Paciente> resultado = pacienteRepository.findById(pacienteId);
 
             if (resultado.isPresent()) {
@@ -62,7 +63,7 @@ import java.util.Optional;
             // Aqui estava Patching
 
         @DeleteMapping(value = "{id}")
-        public ResponseEntity deletePacienteById(@PathVariable int pacienteId) {
+        public ResponseEntity deletePacienteById(@PathVariable Long pacienteId) {
             Optional<Paciente> pacienteFromDB = pacienteRepository.findById(pacienteId);
 
             if (pacienteFromDB.isPresent()) {
