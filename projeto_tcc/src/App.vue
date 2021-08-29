@@ -1,24 +1,23 @@
 <template>
- <div id="app">
-   <div id="nav">
-       <router-link to="/">Home</router-link> |
-       <router-link to="/about">About</router-link>
+  <div id="app">
+    <div id="nav">
+      <router-link to="/">Home</router-link>
+      <router-view />
     </div>
-        <router-view/>
-        <visualisation></visualisation>
+    <div>
+      <!-- <visualisation></visualisation> -->
+    </div>
   </div>
 </template>
 
 <script>
+// import Visualisation from "@/components/Visualisation.vue";
+
 /* eslint-disable */
-
-import Visualisation from './components/Visualisation.vue';
-
 export default {
-  name: 'appp',
+  name: "app",
   components: {
-    Visualisation,
-    
-  }
-}
+    // Visualisation,
+  },
+};
 </script>

@@ -7,13 +7,13 @@
 </template>
 
 <script>
-export default {
+  export default {
     name: "CardHospital",
     props:{
         titulo: String,
         subtitulo: String,
     },
-};
+  };
 </script>
 
 <style>

@@ -1,6 +1,5 @@
 <template>
- <div id="figuraCadastro">
-     <img alt="Vue Pet" src="../assets/icon-patient.png" />
+ <div id="Cadastro">
      <h3>{{titulo}}</h3>
      <h5>{{subtitulo}}</h5>   
     </div>  
@@ -16,6 +15,3 @@ export default {
 }
 </script>
 
-<style>
-
-</style>

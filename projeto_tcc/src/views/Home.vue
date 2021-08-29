@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="front">
     <div class="card">
       <div class="card-body">
         <card-boas-vindas
@@ -14,7 +14,7 @@
     </div>
 
     <div class="row">
-      <div class="col-6" id="Cadastro">
+      <div class="col-6" id="Grafico">
         <button
           @click="IrParaGrafico"
           type="button"
@@ -27,7 +27,6 @@
         </button>
       </div>
 
-      <div class="row">
       <div class="col-6" id="Cadastro">
         <button
           @click="IrParaCadastro"
@@ -42,7 +41,6 @@
       </div>
     </div>
   </div>
-  </div>
 </template>
 
 <script>
@@ -50,23 +48,40 @@
 //import HelloWorld from '@/components/HelloWorld.vue'
 
 import CardBoasVindas from "@/components/CardBoasVindas.vue";
-import CardHospital from '../components/CardHospital.vue';
+import CardHospital from "../components/CardHospital.vue";
 import CardCadastro from "../components/CardCadastro.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     CardBoasVindas,
     CardHospital,
-    CardCadastro,    
+    CardCadastro,
   },
-  methods:{
-    IrParaCadastro(){
-      this.$router.push({path:"/TelaCadastro"});
+  methods: {
+    IrParaCadastro() {
+      this.$router.push({ path: "/TelaCadastro" });
     },
-    IrParaGrafico(){
-      this.$router.push({path:"/TelaGrafico"});
-    }
-  }
+    IrParaGrafico() {
+      this.$router.push({ path: "/TelaGrafico" });
+    },
+  },
 };
 </script>
+<style scoped>
+.front {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+#grafico {
+  text-align: left;
+  border: 3px solid green;
+}
+
+#cadastro {
+  text-align: right;
+  border: 3px solid green;
+}
+</style>

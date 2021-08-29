@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img alt="Vue Pet" src="../assets/icon-patient.png" />
+    <img src="../assets/icon-patient.png" />
 
     <h2>Cadastro do Paciente</h2>
     <h4>Cadastre os dados do seu paciente!</h4>
@@ -29,7 +29,6 @@
             <option value="Endocardite">Endocardite</option>
             <option value="Insuf. Aórtica">Insuf. Aórtica</option>
             <option value="Insuf. Mitral">Insuf. Mitral</option>
-            
           </select>
         </div>
 
@@ -66,8 +65,6 @@
             />
           </form>
         </div>
-
-        
       </div>
     </div>
 
@@ -90,52 +87,53 @@
 
 <script>
 export default {
+  name: "telacadastro",
   data() {
     return {
       paciente: {},
-      
+
       mensagemErro: "",
       listaVeterinarios: [],
     };
   },
-  mounted() {
-    fetch(`http://localhost:8080/veterinarios`, {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => {
-        if (response.ok) return response.json();
-      })
-      .then((veterinarioJSON) => {
-        this.listaVeterinarios = veterinarioJSON;
-      });
-  },
+  // mounted() {
+  //   fetch(`http://localhost:8080/veterinarios`, {
+  //     method: "GET",
+  //     headers: {
+  //       Accept: "application/json",
+  //       "Content-Type": "application/json",
+  //     },
+  //   })
+  //     .then((response) => {
+  //       if (response.ok) return response.json();
+  //     })
+  //     .then((veterinarioJSON) => {
+  //       this.listaVeterinarios = veterinarioJSON;
+  //     });
+  // },
   methods: {
     dadosValidos() {
-      if (this.cachorro.nome == undefined || this.cachorro.nome == "") {
+      if (this.paciente.nome == undefined || this.paciente.nome == "") {
         return false;
       }
       return true;
     },
     salvar() {
       if (!this.dadosValidos()) {
-        this.mensagemErro = "Você deve preencher o nome do seu cachorro!";
+        this.mensagemErro = "Você deve preencher o nome do paciente!";
         return;
       }
 
-      fetch("http://localhost:8080/cachorros", {
+      fetch("http://localhost:8080/pacientes", {
         method: "POST",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(this.cachorro),
+        body: JSON.stringify(this.paciente),
       }).then((response) => {
         if (response.ok) {
-          alert("Seu dog foi cadastrado!"), this.$router.push("/");
+          alert("O paciente foi cadastrado!"), this.$router.push("/");
         }
       });
     },
@@ -169,24 +167,3 @@ export default {
   flex-direction: column;
 }
 </style>
-
-<!--
-    salvarVet() {
-      if (!this.dadosValidos()) {
-        this.mensagemErro = "Você deve preencher o nome do seu cachorro!";
-        return;
-      }
-
-      <div id="campoVet" class="col-3">
-          <label>Escolha o veterinário responsável:</label>
-          <select v-model="cachorro.veterinario_id">
-            <option
-              :key="veterinarioResponsavel.id"
-              v-for="veterinarioResponsavel in listaVeterinarios"
-              :value="veterinarioResponsavel.id"
-            >
-              {{ veterinarioResponsavel.nome }}
-            </option>
-          </select>
-        </div>
-  -->

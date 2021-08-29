@@ -45,17 +45,17 @@ export default {
           //   data: [205, 408, 188, 190, 58, 200, 190, 400, 164, 254, 290, 201]
           // }
           {
-            label: "Data One",
+            label: "Glicose",
             backgroundColor: "#f87d79",
             data: [this.getRandomInt(), this.getRandomInt(),this.getRandomInt(), this.getRandomInt(),this.getRandomInt(), this.getRandomInt(),this.getRandomInt(), this.getRandomInt(),this.getRandomInt(), this.getRandomInt()]
           },
           {
-            label: "Data Two",
+            label: "Creatinina",
             backgroundColor: "##A5CC82",
             data: [this.getRandomInt(), this.getRandomInt(),this.getRandomInt(), this.getRandomInt(),this.getRandomInt(), this.getRandomInt(),this.getRandomInt(), this.getRandomInt(),this.getRandomInt(), this.getRandomInt(),this.getRandomInt(), this.getRandomInt(),this.getRandomInt(), this.getRandomInt(),this.getRandomInt(), this.getRandomInt()]
           },
           {
-            label: "Data three",
+            label: "Hemoglobina",
             backgroundColor: "#33F0FF",
             data: [this.getRandomInt(), this.getRandomInt(), this.getRandomInt(), this.getRandomInt(),this.getRandomInt(), this.getRandomInt(),this.getRandomInt(), this.getRandomInt(),this.getRandomInt(), this.getRandomInt()]
           }

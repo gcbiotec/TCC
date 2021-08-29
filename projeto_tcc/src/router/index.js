@@ -18,8 +18,8 @@ const routes = [
     component: TelaCadastro
   },
   {
-    path: '/telagraficos',
-    name: 'TelaGraficos',
+    path: '/telagrafico',
+    name: 'TelaGrafico',
     component: TelaGraficos
   }, 
 ]
