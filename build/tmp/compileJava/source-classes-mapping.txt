@@ -1,0 +1,12 @@
+org/medicdata/MedicDataApp.java
+ org.medicdata.MedicDataApp
+org/medicdata/controller/StatusController.java
+ org.medicdata.controller.StatusController
+org/medicdata/repository/PacienteRepository.java
+ org.medicdata.repository.PacienteRepository
+org/medicdata/model/Paciente.java
+ org.medicdata.model.Paciente
+org/medicdata/service/PacienteService.java
+ org.medicdata.service.PacienteService
+org/medicdata/controller/PacienteController.java
+ org.medicdata.controller.PacienteController
