@@ -48,7 +48,7 @@ public class PacienteService {
         pacienteSalvo.setAltura(paciente.getAltura());
         pacienteSalvo.setNome(paciente.getNome());
         pacienteSalvo.setPeso(paciente.getPeso());
-        pacienteSalvo.setDiagnostico(paciente.getDiagnostico());
+        //pacienteSalvo.setDiagnostico(paciente.getDiagnostico());
         return pacienteSalvo;
     }
 }
