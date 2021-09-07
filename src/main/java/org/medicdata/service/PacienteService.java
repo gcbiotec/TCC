@@ -23,7 +23,6 @@ public class PacienteService {
         return repository.findById(id);
     }
 
-
     public Optional<Paciente> findById(Long id) {
         return repository.findById(id);
     }

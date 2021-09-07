@@ -1,5 +1,6 @@
 package org.medicdata.repository;
 
+import org.medicdata.model.Paciente;
 import org.medicdata.model.Prontuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -10,6 +11,9 @@ import java.util.List;
 
 @Repository
 public interface ProntuarioRepository extends JpaRepository<Prontuario, Long> {
-    @Query("select p from Prontuario p where p.idPaciente=:idPaciente")
-    List<Prontuario> findByPaciente(@Param("idPaciente") Long idPaciente);
+//    @Query("select p from Prontuario p where p.idpaciente = :idpaciente")
+    List<Prontuario> findByPaciente(@Param("idpaciente") Long idpaciente);
+
+    @Override
+    <S extends Prontuario> S save(S entity);
 }

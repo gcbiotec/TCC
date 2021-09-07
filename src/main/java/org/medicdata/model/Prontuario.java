@@ -3,9 +3,11 @@ package org.medicdata.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
+
 
 @Entity
-@Table(name = "prontuario_paciente")
+@Table(name = "prontuario")
 
 public class Prontuario {
 
@@ -14,10 +16,8 @@ public class Prontuario {
     @Column(name = "idprontuario", unique = true)
     private Long idprontuario;
 
-    @JsonIgnore
-    @ManyToOne
-    @JoinColumn(name = "idpaciente")
-    private Paciente paciente;
+
+//    private Long idpaciente;
 
     @Column(name = "glicose")
     private int glicose;
@@ -70,11 +70,17 @@ public class Prontuario {
     @Column(name = "idade")
     private int idade;
 
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "idpaciente")
+
+    private Paciente paciente;
+
     public Prontuario(Long idprontuario, int glicose, double creatinina, double ck_mb,
                       double hemoglobina, int leucocitos, int neutrofilos, double HDL, double LDL,
                       int troponina, int albumina, String hipertensao, String diabetes, String fumante,
-                      String alcoolismo, String comorbidades, String diagnostico) {
-
+                      String alcoolismo, String comorbidades, String diagnostico, int idade) {
+        super();
         this.idprontuario = idprontuario;
         this.glicose = glicose;
         this.creatinina = creatinina;
@@ -92,6 +98,7 @@ public class Prontuario {
         this.alcoolismo = alcoolismo;
         this.comorbidades = comorbidades;
         this.diagnostico = diagnostico;
+        this.idade = idade;
     }
 
     public Prontuario() {
@@ -101,9 +108,17 @@ public class Prontuario {
         return idprontuario;
     }
 
-    public void setIdprontuario(Long pacienteId) {
+    public void setIdprontuario(Long idprontuario) {
         this.idprontuario = idprontuario;
     }
+
+//    public Long getIdpaciente() {
+//        return idpaciente;
+//    }
+//
+//    public void setIdpaciente(Long idpaciente) {
+//        this.idpaciente = idpaciente;
+//    }
 
     public int getGlicose() {
         return glicose;

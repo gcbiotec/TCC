@@ -1,10 +1,14 @@
 package org.medicdata.model;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
+import java.io.Serializable;
+import java.util.List;
+
 
 @Entity
-@Table(name = "registro_paciente")
-public class Paciente {
+@Table(name = "paciente")
+public class Paciente implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +24,19 @@ public class Paciente {
     @Column(name = "peso")
     private int peso;
 
-    public Paciente(Long idpaciente, String nome, int altura, int peso) {
+    @OneToMany(
+            mappedBy = "paciente",
+            targetEntity = Prontuario.class,
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.PERSIST
+    )
+    private List<Prontuario> prontuarios;
+
+    public Paciente(){};
+
+    public Paciente(Long idpaciente, String nome, int altura, int peso,  List<Prontuario> prontuarios) {
+
+        super();
 
         this.idpaciente = idpaciente;
 
@@ -30,15 +46,16 @@ public class Paciente {
 
         this.peso = peso;
 
+        this.prontuarios = prontuarios;
+
     }
 
-    public Paciente(){}
 
-    public Long getId() {
+    public Long getIdpaciente() {
         return idpaciente;
     }
 
-    public void setId(Long pacienteId) {
+    public void setIdpaciente(Long idpaciente) {
         this.idpaciente = idpaciente;
     }
 
@@ -65,6 +82,15 @@ public class Paciente {
     public void setPeso(int peso) {
         this.peso = peso;
     }
+
+    public List<Prontuario> getProntuarios() {
+        return prontuarios;
+    }
+
+    public void setProntuarios(List<Prontuario> prontuarios) {
+        this.prontuarios = prontuarios;
+    }
+
 
 
 }
