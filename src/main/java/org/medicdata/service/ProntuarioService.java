@@ -1,6 +1,5 @@
 package org.medicdata.service;
 
-
 import org.medicdata.model.Paciente;
 import org.medicdata.model.Prontuario;
 import org.medicdata.repository.ProntuarioRepository;
@@ -20,8 +19,8 @@ public class ProntuarioService {
         this.prontuarioRepository = prontuarioRepository;
     }
 
-    public List<Prontuario> findByPaciente(Long idPaciente) {
-        List<Prontuario> prontuarios = prontuarioRepository.findByPaciente(idPaciente);
+    public List<Prontuario> findByIdPaciente(Long idPaciente) {
+        List<Prontuario> prontuarios = prontuarioRepository.findByIdPaciente(idPaciente);
         return prontuarios;
     }
     public Prontuario save (Prontuario prontuario){
@@ -31,6 +30,7 @@ public class ProntuarioService {
     public void delete(Long id) {
         prontuarioRepository.deleteById(id);
     }
+
     public Prontuario atualizarProntuarioPorId(Long id, Prontuario prontuario){
         Optional<Prontuario> buscaProntuario = prontuarioRepository.findById(id);
         if (buscaProntuario.isPresent()){

@@ -1,20 +1,20 @@
 org/medicdata/service/PacienteService.java
  org.medicdata.service.PacienteService
-org/medicdata/model/Paciente.java
- org.medicdata.model.Paciente
+org/medicdata/model/Prontuario.java
+ org.medicdata.model.Prontuario
 org/medicdata/MedicDataApp.java
  org.medicdata.MedicDataApp
 org/medicdata/repository/PacienteRepository.java
  org.medicdata.repository.PacienteRepository
 org/medicdata/controller/StatusController.java
  org.medicdata.controller.StatusController
+org/medicdata/model/Paciente.java
+ org.medicdata.model.Paciente
+org/medicdata/repository/ProntuarioRepository.java
+ org.medicdata.repository.ProntuarioRepository
 org/medicdata/service/ProntuarioService.java
  org.medicdata.service.ProntuarioService
 org/medicdata/controller/PacienteController.java
  org.medicdata.controller.PacienteController
-org/medicdata/model/Prontuario.java
- org.medicdata.model.Prontuario
 org/medicdata/controller/ProntuarioController.java
  org.medicdata.controller.ProntuarioController
-org/medicdata/repository/ProntuarioRepository.java
- org.medicdata.repository.ProntuarioRepository

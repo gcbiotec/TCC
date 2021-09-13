@@ -4,20 +4,19 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import javax.persistence.Entity;
-
+import java.io.Serializable;
 
 @Entity
 @Table(name = "prontuario")
-
-public class Prontuario {
+public class Prontuario implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idprontuario", unique = true)
     private Long idprontuario;
 
-
-//    private Long idpaciente;
+    @Column(name = "idpaciente")
+    private Long idpaciente;
 
     @Column(name = "glicose")
     private int glicose;
@@ -26,7 +25,7 @@ public class Prontuario {
     private double creatinina;
 
     @Column(name = "ck_mb")
-    private double ck_mb;
+    private double ckmb;
 
     @Column(name = "hemoglobina")
     private double hemoglobina;
@@ -72,19 +71,18 @@ public class Prontuario {
 
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "idpaciente")
-
+    @JoinColumn(name = "idpaciente",insertable = false, updatable = false)
     private Paciente paciente;
 
-    public Prontuario(Long idprontuario, int glicose, double creatinina, double ck_mb,
+    public Prontuario(Long idprontuario, int glicose, double creatinina, double ckmb,
                       double hemoglobina, int leucocitos, int neutrofilos, double HDL, double LDL,
                       int troponina, int albumina, String hipertensao, String diabetes, String fumante,
                       String alcoolismo, String comorbidades, String diagnostico, int idade) {
-        super();
+
         this.idprontuario = idprontuario;
         this.glicose = glicose;
         this.creatinina = creatinina;
-        this.ck_mb = ck_mb;
+        this.ckmb = ckmb;
         this.hemoglobina = hemoglobina;
         this.leucocitos = leucocitos;
         this.neutrofilos = neutrofilos;
@@ -112,13 +110,13 @@ public class Prontuario {
         this.idprontuario = idprontuario;
     }
 
-//    public Long getIdpaciente() {
-//        return idpaciente;
-//    }
-//
-//    public void setIdpaciente(Long idpaciente) {
-//        this.idpaciente = idpaciente;
-//    }
+    public Long getIdpaciente() {
+        return idpaciente;
+    }
+
+    public void setIdpaciente(Long idpaciente) {
+        this.idpaciente = idpaciente;
+    }
 
     public int getGlicose() {
         return glicose;
@@ -136,12 +134,12 @@ public class Prontuario {
         this.creatinina = creatinina;
     }
 
-    public double getCk_mb() {
-        return ck_mb;
+    public double getCkmb() {
+        return ckmb;
     }
 
-    public void setCk_mb(double ck_mb) {
-        this.ck_mb = ck_mb;
+    public void setCkmb(double ckmb) {
+        this.ckmb = ckmb;
     }
 
     public double getHemoglobina() {

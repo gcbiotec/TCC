@@ -13,8 +13,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin
 @RestController
-@Tag(name = "user")
+@Tag(name = "paciente")
 public class PacienteController {
 
     @Autowired
@@ -74,7 +75,7 @@ public class PacienteController {
         try {
             Paciente pacienteAtualizado = pacienteService.atualizarPorId(id, paciente);
 
-            return ResponseEntity.status(HttpStatus.OK).body(paciente);
+            return ResponseEntity.status(HttpStatus.OK).body(pacienteAtualizado);
 
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
