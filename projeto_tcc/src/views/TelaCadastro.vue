@@ -9,8 +9,10 @@
       </div>
       <div class="col-3"></div>
     </div>
-
+      
+  <div class="container">
     <div class="row">
+      
       <form class="needs-validation" novalidate>
         <div id="campoDeNome" class="container">
           <input
@@ -20,13 +22,15 @@
             class="form-control"
             placeholder="Qual é o nome do paciente?"
           />
-        </div>
+        </div>       
       </form>
+      
     </div>
+  </div>
 
     <div class="container">
-      <div class="row">
-        <div id="escolhaDiagnostico" class="col-3">
+      <!-- <div class="row"> -->
+        <!-- <div id="escolhaDiagnostico" class="col-3">
           <label>Escolha o principal diagnóstico do seu paciente:</label>
 
           <select input v-model="paciente.diagnostico" class="dropdown">
@@ -37,9 +41,11 @@
             <option value="Insuf. Aórtica">Insuf. Aórtica</option>
             <option value="Insuf. Mitral">Insuf. Mitral</option>
           </select>
-        </div>
+        </div> -->
       </div>
       <div class="row">
+        <div class="col-3"></div>
+        <div class="col-3">
         <form>
           <label id="escolhaPeso" for="formControlPeso">Escolha o peso:</label>
           <input
@@ -52,16 +58,19 @@
             step="1"
           />
         </form>
+        </div>
       </div>
 
       <div class="row">
+        <div class="col-3"></div>
+        <div class="col-3">
         <form>
-          <label id="escolhaIdade" for="formControlIdade"
-            >Escolha a idade:</label
+          <label id="escolhaIdade" for="formControlAltura"
+            >Altura:</label
           >
           <input
             id="validationDefault03"
-            v-model="paciente.idade"
+            v-model="paciente.altura"
             type="number"
             value="1"
             min="1"
@@ -69,6 +78,7 @@
             step="1"
           />
         </form>
+        </div>
       </div>
 
       <div id="botao" class="container">
@@ -86,7 +96,7 @@
         </div>
       </div>
     </div>
-  </div>
+  
 </template>
 
 <script>
@@ -156,12 +166,9 @@ export default {
 
 #campoDeNome {
   display: flex;
-  width: 70%;
   flex-direction: column;
   padding-top: 40pt;
-  text-align: left;
-  align-items: left;
-
+  width: 65%;
 }
 
 #botao {
