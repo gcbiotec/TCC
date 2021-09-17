@@ -1,10 +1,13 @@
 package org.medicdata.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.persistence.Entity;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "prontuario")
@@ -17,6 +20,11 @@ public class Prontuario implements Serializable {
 
     @Column(name = "idpaciente")
     private Long idpaciente;
+
+    @Column(name = "datacriacao")
+    @DateTimeFormat(iso = DateTimeFormat.ISO.TIME)
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime datacriacao;
 
     @Column(name = "glicose")
     private int glicose;
@@ -262,4 +270,11 @@ public class Prontuario implements Serializable {
         this.paciente = paciente;
     }
 
+    public LocalDateTime getDatacriacao() {
+        return datacriacao;
+    }
+
+    public void setDatacriacao(LocalDateTime datacriacao) {
+        this.datacriacao = datacriacao;
+    }
 }

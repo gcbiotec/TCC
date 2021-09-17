@@ -47,7 +47,10 @@ public class PacienteService {
         pacienteSalvo.setAltura(paciente.getAltura());
         pacienteSalvo.setNome(paciente.getNome());
         pacienteSalvo.setPeso(paciente.getPeso());
-        //pacienteSalvo.setDiagnostico(paciente.getDiagnostico());
         return pacienteSalvo;
+    }
+
+    public List<Paciente> listById(Long id) {
+        return repository.listById(id);
     }
 }

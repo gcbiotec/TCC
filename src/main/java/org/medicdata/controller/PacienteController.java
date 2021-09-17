@@ -54,6 +54,15 @@ public class PacienteController {
         }
 
     }
+    @GetMapping(value = "/pacientes/{id}/")
+    public ResponseEntity<List<Paciente>> listarRegistrosPorId(@PathVariable(value = "id") Long id ) {
+        try {
+            return new ResponseEntity(pacienteService.listById(id), HttpStatus.OK);
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        }
+
+    }
 
     @GetMapping(value = "/pacientes/{id}")
     public ResponseEntity<?> encontraPacientePorId(@PathVariable(value = "id") Long id ) {
