@@ -1,31 +1,32 @@
 <template>
   <div id="front">
-    <div class="card">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
       <div class="card-body">
         <card-boas-vindas
           titulo="Bem vindo ao Data Clinic"
           subtitulo="A maneira mais fácil de entrar no mundo dos dados!"
         />
-        <card-hospital
-          titulo="Hospital de Pediatria"
-          subtitulo="Hospital do Carinho!"
-        />
       </div>
-    </div>
-
+      </div>
+      <div class="col-4"></div>
+    </div>  
     <div class="row">
-      <div class="col-6" id="Grafico">
-        <button
-          @click="IrParaGrafico"
-          type="button"
-          class="btn btn-outline-primary"
-        >
-          <card-cadastro
-            titulo="Acesso aos gráficos"
-            subtitulo="Clique aqui para acessar os gráficos com dados do paciente!"
-          />
-        </button>
-      </div>
+      <div class="col-4"></div>
+      <div class="col-4">
+      <card-hospital
+        titulo="Hospital de Pediatria"
+        subtitulo="Hospital do Carinho!"
+      />
+    </div>
+    </div>
+    <div class="col-4"></div>
+
+    
+
+    <div class="row" id="CadastroPaciente">
+     <div class="col-3"></div>
 
       <div class="col-6" id="Cadastro">
         <button
@@ -39,7 +40,43 @@
           />
         </button>
       </div>
+      <div class="col-3"></div>
     </div>
+
+    <div class="row" id="CadastroProntuario">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <button
+          @click="IrParaCadastroProntuario"
+          type="button"
+          class="btn btn-outline-primary"
+        >
+          <card-cadastro
+            titulo="Acesso ao cadastro de prontuário"
+            subtitulo="Clique aqui para cadastrar prontuário do paciente!"
+          />
+        </button>
+      </div>
+      <div class="col-3"></div>
+    </div>
+
+    <div class="row" id="PaginaGraficos">
+     <div class="col-3"></div>
+      <div class="col-6" id="Grafico">
+        <button
+          @click="IrParaGrafico"
+          type="button"
+          class="btn btn-outline-primary"
+        >
+          <card-cadastro
+            titulo="Acesso aos gráficos"
+            subtitulo="Clique aqui para acessar os gráficos com dados do paciente!"
+          />
+        </button>
+      </div>
+    <div class="col-3"></div>
+    </div>
+
   </div>
 </template>
 
@@ -65,6 +102,9 @@ export default {
     IrParaGrafico() {
       this.$router.push({ path: "/TelaGrafico" });
     },
+    IrParaCadastroProntuario() {
+      this.$router.push({ path: "/TelaProntuario" });
+    },
   },
 };
 </script>
@@ -80,8 +120,24 @@ export default {
   border: 3px solid green;
 }
 
-#cadastro {
-  text-align: right;
+#CadastroProntuario {
+  text-align: center;
   border: 3px solid green;
+  padding: 15px;
+}
+#CadastroPaciente {
+  text-align: center;
+  border: 3px solid green;
+  padding: 15px;
+}
+#PaginaGraficos {
+  text-align: center;
+  border: 3px solid green;
+  padding: 15px;
+}
+#card-body {
+  align-items: center;
+  border: 3px solid green;
+
 }
 </style>

@@ -5,13 +5,13 @@
     <h5>{{subtitulo}}</h5>
     </div>
 
-     <visualisation></visualisation>
+     <visualisation-hemoglobina></visualisation-hemoglobina>
 
   </div>  
 </template>
 
 <script>
-import Visualisation from "@/components/Visualisation.vue";
+import VisualisationHemoglobina from "@/components/VisualisationHemoglobina.vue";
 
 export default {
     name: 'CardGrafico',
@@ -21,7 +21,7 @@ export default {
   },
 
   components: {
-      Visualisation,
+      VisualisationHemoglobina
     },
     
 }

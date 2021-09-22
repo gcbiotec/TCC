@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="row">
-      <div class="col-3"></div>
-      <div class="col-6">
+      <div class="col-4"></div>
+      <div class="col-8">
         <img id="imagem" src="../assets/icon-patient.png" />
         <h2>Cadastro do Paciente</h2>
         <h4>Cadastre os dados do seu paciente!</h4>
       </div>
-      <div class="col-3"></div>
+      <div class="col-4"></div>
     </div>
       
   <div class="container">
@@ -29,19 +29,7 @@
   </div>
 
     <div class="container">
-      <!-- <div class="row"> -->
-        <!-- <div id="escolhaDiagnostico" class="col-3">
-          <label>Escolha o principal diagnóstico do seu paciente:</label>
-
-          <select input v-model="paciente.diagnostico" class="dropdown">
-            <option value="Infarto Agudo">Infarto Agudo</option>
-            <option value="Aneurisma">Aneurisma</option>
-            <option value="AVC">AVC</option>
-            <option value="Endocardite">Endocardite</option>
-            <option value="Insuf. Aórtica">Insuf. Aórtica</option>
-            <option value="Insuf. Mitral">Insuf. Mitral</option>
-          </select>
-        </div> -->
+      
       </div>
       <div class="row">
         <div class="col-3"></div>
@@ -110,21 +98,7 @@ export default {
       
     };
   },
-  // mounted() {
-  //   fetch(`http://localhost:8080/veterinarios`, {
-  //     method: "GET",
-  //     headers: {
-  //       Accept: "application/json",
-  //       "Content-Type": "application/json",
-  //     },
-  //   })
-  //     .then((response) => {
-  //       if (response.ok) return response.json();
-  //     })
-  //     .then((veterinarioJSON) => {
-  //       this.listaVeterinarios = veterinarioJSON;
-  //     });
-  // },
+  
   methods: {
     dadosValidos() {
       if (this.paciente.nome == undefined || this.paciente.nome == "") {
@@ -175,13 +149,6 @@ export default {
   align-content: bottom;
   padding-top: 40pt;
 }
-/* #escolhaRaca {
-  display: flex;
-  flex-direction: column;
-}
-#escolhaPeso {
-  display: flex;
-  flex-direction: column; */
 
 #escolhaIdade {
   display: flex;

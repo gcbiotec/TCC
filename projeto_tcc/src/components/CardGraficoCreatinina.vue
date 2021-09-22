@@ -5,13 +5,13 @@
     <h5>{{subtitulo}}</h5>
     </div>
 
-     <visualisation></visualisation>
+     <visualisation-creatinina></visualisation-creatinina>
 
   </div>  
 </template>
 
 <script>
-import Visualisation from "@/components/Visualisation.vue";
+import VisualisationCreatinina from '@/components/VisualisationCreatinina.vue';
 
 export default {
     name: 'CardGrafico',
@@ -21,7 +21,7 @@ export default {
   },
 
   components: {
-      Visualisation,
+      VisualisationCreatinina
     },
     
 }

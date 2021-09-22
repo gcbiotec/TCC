@@ -5,13 +5,13 @@
     <h5>{{subtitulo}}</h5>
     </div>
 
-     <visualisation></visualisation>
+     <visualisation-glicose></visualisation-glicose>
 
   </div>  
 </template>
 
 <script>
-import Visualisation from "@/components/Visualisation.vue";
+import VisualisationGlicose from "@/components/VisualisationGlicose.vue";
 
 export default {
     name: 'CardGrafico',
@@ -21,7 +21,7 @@ export default {
   },
 
   components: {
-      Visualisation,
+    VisualisationGlicose,
     },
     
 }
